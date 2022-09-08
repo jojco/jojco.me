@@ -1,0 +1,2 @@
+# jojco.me
+Personal webpage.

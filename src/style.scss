@@ -10,18 +10,28 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+
+  
+}
+
+.light {
+  background-color: #f1f1f1;
+}
+.dark {
+  background-color: #242424;
 }
 
 a {
   font-weight: 500;
-  color: $primary-color;
+  color: var(--primary-color);
   text-decoration: inherit;
 
   &::hover {
@@ -72,6 +82,7 @@ button button .card {
   text-align: center;
 }
 
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -87,6 +98,16 @@ button button .card {
   }
 }
 
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1.5s ease-in-out;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
 .button-primary {
-  background-color: $primary-color;
+  background-color: var(--primary-color);
 }

@@ -1,7 +1,7 @@
 <template>
+  <LocaleSwitch />
+  <ThemeSwitch />
   <div id="nav">
-    <LocaleSwitch />
-    <ThemeSwitch />
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <button @click="$router.go(-1)">Back</button>

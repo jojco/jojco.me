@@ -2,6 +2,8 @@
 @import './variables';
 // @import './variables_dark';
 
+
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -11,15 +13,17 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+}
 
-  
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 .light {
@@ -76,9 +80,10 @@ button button .card {
 }
 
 #app {
-  max-width: 1280px;
+  // max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
+  // padding: 2rem;
   text-align: center;
 }
 

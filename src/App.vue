@@ -1,17 +1,10 @@
 <template>
-  <LocaleSwitch />
-  <ThemeSwitch />
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <button @click="$router.go(-1)">Back</button>
-  </div>
+  <AppHeader />
   <router-view />
 </template>
 
 <script lang="ts" setup>
-import LocaleSwitch from "./components/LocaleSwitch.vue";
-import ThemeSwitch from "./components/ThemeSwitch.vue";
+import AppHeader from "./components/AppHeader.vue";
 </script>
 
 <style lang="scss"></style>

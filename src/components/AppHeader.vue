@@ -7,16 +7,12 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/about">Contact</router-link>
     </div>
-    <div>
-      <LocaleSwitch />
-      <ThemeSwitch />
-    </div>
+    <RightMenu />
   </div>
 </template>
 
 <script setup lang="ts">
-import LocaleSwitch from "~/components/LocaleSwitch.vue";
-import ThemeSwitch from "~/components/ThemeSwitch.vue";
+import RightMenu from "~/components/RightMenu.vue";
 </script>
 
 <style scoped>

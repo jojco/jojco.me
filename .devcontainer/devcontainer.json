@@ -4,15 +4,10 @@
   "name": "jojco.me",
   "build": {
     "dockerfile": "Dockerfile",
-    // Update 'VARIANT' to pick a Node version: 16, 14, 12.
-    // Append -bullseye or -buster to pin to an OS version.
-    // Use -bullseye variants on local on arm64/Apple Silicon.
     "args": {
       "VARIANT": "16-bullseye"
     }
   },
-
-  // Set *default* container specific settings.json values on container create.
   "settings": {
     "vue/require-default-prop": "off",
     "editor.defaultFormatter": null,
@@ -30,16 +25,15 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
   },
-
-  // Add the IDs of extensions you want installed when the container is created.
-  "extensions": ["Vue.volar", "esbenp.prettier-vscode", "usernamehw.errorlens"],
-
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "extensions": [
+    "Vue.volar",
+    "esbenp.prettier-vscode",
+    "usernamehw.errorlens",
+    "ms-vscode.live-server"
+  ],
   // "forwardPorts": [],
-
-  // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "yarn install",
-
-  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "initializeCommand": "/bin/bash .devcontainer/initialization.sh",
+  "postCreateCommand": "/bin/bash .devcontainer/post-create.sh",
+  "postAttachCommand": "/bin/bash .devcontainer/post-attach.sh",
   "remoteUser": "node"
 }

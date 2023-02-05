@@ -1,19 +1,26 @@
 import { createRouter, createWebHistory } from "vue-router";
-import About from "~/pages/AboutPage.vue";
-import Portfolio from "~/pages/PortfolioPage.vue";
+import AboutPage from "~/pages/AboutPage.vue";
+import PortfolioPage from "~/pages/PortfolioPage.vue";
+import ContactPage from "~/pages/ContactPage.vue";
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: About,
+    component: AboutPage,
   },
   {
     path: "/about",
     name: "About",
-    component: Portfolio,
+    component: PortfolioPage,
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: ContactPage,
   },
 ];
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
